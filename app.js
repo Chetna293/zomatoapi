@@ -156,21 +156,21 @@ app.post('/placeOrder',(req,res) => {
   })
 })
 
-app.put('/updateOrder/:id',(req,res) => {
-    let oid = Number(req.params.id);
-    db.collection('orders').updateOne(
-      {id:oid},
-      {
-        $set:{
-          "status":req.body.status,
-          "bank_name":req.body.bank_name,
-          "date":req.body.date
-        }
-      },(err,result) => {
-        if(err) throw err;
-        res.send('Order Updated')
+app.put('/updateOrder/:orderid',(req,res) => {
+  let oid = Number(req.params.id);
+  db.collection('orders').updateOne(
+    {id:oid},
+    {
+      $set:{
+        "status":req.body.status,
+        "bank_name":req.body.bank_name,
+        "date":req.body.date
       }
-    )
+    },(err,result) => {
+      if(err) throw err;
+      res.send('Order Updated')
+    }
+  )
 })
 
 app.delete('/deleteOrder/:id',(req,res) => {

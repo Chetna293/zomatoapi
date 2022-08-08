@@ -33,12 +33,12 @@
 >>(Post) localhost:9500/placeOrder (local) https://zomtoapi.herokuapp.com/placeOrder (live)
 (
     {
-        "name":"Nikita",
-        "email":"nikita@gmail.com",
-        "address":"Hom 39",
-        "phone":934645457,
-        "cost":845,
-        "menuItem":[10,13,17]
+        "name":"sumit",
+        "email":"sumit@gmail.com",
+        "address":"flat 34",
+        "phone":8752347873,
+        "cost":650,
+        "menuItem":[5,3,8]
     }
 )
 
@@ -62,3 +62,6 @@
 ////////////////////////////////
 > Delete orders
 >>(Delete) localhost:9500/deleteOrder/628c485d93399d546c136d84
+
+
+        
